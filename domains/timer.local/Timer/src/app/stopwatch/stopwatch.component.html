@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="d-flex justify-content-center mt-5">
+    <div class="card border-dark mb-3" style="width: 40rem;">
+      <div class="card-header text-center">{{timeForDisplay.h}}:{{timeForDisplay.m}}:{{timeForDisplay.s}}</div>
+      <div class="card-body text-dark">
+        <p class="d-flex card-text justify-content-center">
+          <button type="button" class="btn btn-primary" (click)="runStopwatch()"
+                  [class.btn-success]="!isStarted">{{startButton}}</button>
+          <button type="button" class="btn btn-warning ml-2" (click)="showAlert(); pauseStopwatch($event)"
+                  [disabled]="!isStarted">Wait
+          </button>
+          <button type="button" class="btn btn-dark ml-2" (click)="resetStopwatch()">Reset</button>
+        </p>
+        <div class="d-flex justify-content-center">
+          <span class="badge badge-warning" *ngIf="alert">Double Click to Wait!</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,89 @@
+.slider{
+  grid-area: slider;
+  max-width: 1300px;
+  position: relative;
+  margin: 0 auto;
+  &__wrapper{
+    position: relative;
+    width: calc(100% * 4);
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s;
+    -webkit-transition-timing-function: cubic-bezier(.67,.01,.23,1);
+    -o-transition-timing-function: cubic-bezier(.67,.01,.23,1);
+    transition-timing-function: cubic-bezier(.67,.01,.23,1);
+}
+  &__viewport{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    text-align: center;
+  }
+}
+.slide{
+  width: calc(100%/4);
+  list-style: none;
+  display: inline;
+  float: left;
+  & img{
+    width:100%;
+  }
+}
+.radio-button{
+  bottom: 5px;
+  position: absolute;
+  left: 50%;
+}
+
+.radio-button .ctrl-select {
+  margin:2px;
+  display:inline-block;
+  width:16px;
+  height:16px;
+  overflow:hidden;
+  text-indent:-9999px;
+  background:url("../../../assets/img/slide/radioBg.png") center bottom no-repeat;
+}
+
+.radio-button .ctrl-select:hover {
+  cursor:pointer;
+  background-position:center center;
+}
+
+.radio-button .ctrl-select.active {
+  background-position:center top;
+}
+
+#prewbutton, #nextbutton {
+  display:block;
+  width:40px;
+  height:100%;
+  position:absolute;
+  top:0;
+  overflow:hidden;
+  text-indent:-999px;
+  background: url("../../../assets/img/slide/arrowBg.png") left center no-repeat;
+  opacity:0.5;
+  z-index:3;
+  outline:none !important;
+  cursor: pointer;
+}
+
+#prewbutton {
+  left:10px;
+}
+
+#nextbutton {
+  right:10px;
+  background:url("../../../assets/img/slide/arrowBg.png") right center no-repeat;
+}
+
+#prewbutton:hover, #nextbutton:hover {
+  opacity:1;
+}
+

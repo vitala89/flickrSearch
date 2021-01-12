@@ -1,0 +1,27 @@
+@import "../utils/normalize";
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1300px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  position: relative;
+  min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}

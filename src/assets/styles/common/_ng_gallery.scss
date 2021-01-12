@@ -1,0 +1,20 @@
+.ngx-gallery-icon {
+  color: #5e5373 !important;
+  &:hover{
+    color: black !important;
+  }
+}
+
+.ngx-gallery-thumbnails-wrapper {
+  width: 50% !important;
+  height: 40% !important;
+  top: 52px;
+  margin: 0 25%;
+}
+.ngx-gallery-thumbnails .ngx-gallery-thumbnail.ngx-gallery-active{
+  border: 1px solid #000000!important;
+}
+
+.ngx-gallery-thumbnails .ngx-gallery-thumbnail{
+  border: 1px solid rgba(199, 199, 199, 0.45) !important;
+}

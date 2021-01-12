@@ -1,0 +1,19 @@
+/* About */
+.iframe__map{
+  width: 100%;
+}
+
+.about{
+  display: grid;
+  &__title{
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+  }
+  &__content{
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+/* End About */

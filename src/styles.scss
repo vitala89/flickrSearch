@@ -1,0 +1,23 @@
+/* Importing Bootstrap SCSS file.
+@import '~bootstrap/scss/bootstrap';
+*/
+
+
+@import "assets/styles/utils/fonts.scss";
+@import "assets/styles/common/global.scss";
+@import "assets/styles/mixins/media.scss";
+@import "assets/styles/common/_container.scss";
+@import "assets/styles/common/_header.scss";
+@import "assets/styles/common/_sidebar.scss";
+@import "assets/styles/common/_nav.scss";
+@import "assets/styles/common/_main.scss";
+@import "assets/styles/common/top_product_cart.scss";
+@import "assets/styles/common/_contact.scss";
+@import "assets/styles/common/_about.scss";
+@import "assets/styles/common/_footer.scss";
+@import "assets/styles/common/_datepicker.scss";
+@import "assets/styles/common/_slider.scss";
+@import "assets/styles/common/_registration.scss";
+@import "assets/styles/common/order.scss";
+@import "assets/styles/common/ng_gallery.scss";
+

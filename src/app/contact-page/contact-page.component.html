@@ -1,0 +1,48 @@
+<div class="container">
+<main class="main">
+  <div class="contact">
+    <agm-map [latitude]="latitude" [longitude]="longitude">
+      <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+    </agm-map>
+    <div class="contact__title" >
+      <h1>Веломагазин Bike Shop</h1>
+    </div>
+    <div class="contact__content">
+      <ul class="contact__details">
+        <li class="contact__li"> <strong>Phone:</strong> <span>(123) 123-456 </span></li>
+        <li class="contact__li"> <strong>Fax:</strong> <span>(123) 123-456 </span></li>
+        <li class="contact__li"> <strong>Web:</strong> <span><a href="#">www.example.com</a></span></li>
+        <li class="contact__li"> <strong>E-Mail:</strong> <span><a href="#">office@example.com</a></span></li>
+      </ul>
+    </div>
+    <form class="contact__form" #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate >
+      <div class="field">
+      <input class="contact__input" type="text" name="firstName" placeholder="Ваше имя.." [(ngModel)]="firstName" required minlength="3" #firstNameInput="ngModel">
+        <div class="is-error" *ngIf="firstNameInput.invalid && firstNameInput.dirty">
+          Имя является обязательным и должно содержать не менее 3 символов.
+        </div>
+      </div>
+      <div class="field">
+        <input class="contact__input" type="text" name="lastName" placeholder="Ваша Фамилия.." [(ngModel)]="lastName" required minlength="3" #lastNameInput="ngModel">
+        <div class="is-error" *ngIf="lastNameInput.invalid && lastNameInput.dirty">
+          Фамилия является обязательным и должно содержать не менее 3 символов.
+        </div>
+      </div>
+      <div class="field">
+        <input class="contact__input" type="email" name="email" placeholder="Ваше email.." [(ngModel)]="email" required email #emailInput="ngModel">
+        <div class="is-error" *ngIf="emailInput.invalid && emailInput.dirty">
+          Должен быть действующий адрес электронной почты.
+        </div>
+      </div>
+      <div class="field">
+      <textarea class="contact__input"  name="message" placeholder="Напишите здесь.." style="height:200px" [(ngModel)]="message" required #messageInput="ngModel"></textarea>
+        <div class="is-error" *ngIf="messageInput.invalid && messageInput.dirty">
+          Текст нужно написать!
+        </div>
+      </div>
+        <button type="submit" class="contact__submit" [disabled]="" >Отправить</button>
+
+    </form>
+  </div>
+</main>
+</div>

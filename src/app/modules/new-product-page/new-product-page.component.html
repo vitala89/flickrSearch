@@ -1,0 +1,80 @@
+<h3>Новый Товар</h3>
+<form #f="ngForm" (ngSubmit)="submit(f)" novalidate>
+  <div class="p-fluid p-formgrid p-grid">
+
+    <div class="p-field p-col-12 p-md-12">
+<span class="p-float-label">
+    <input id="name" type="text" name="name" pInputText [(ngModel)]="formModel.name" required maxlength="50"
+           minlength="3" #nameInput="ngModel"
+           [ngClass]="{'p-invalid': (nameInput.invalid && submitted) || (nameInput.dirty && nameInput.invalid)}">
+    <label for="name">Название товара</label>
+</span>
+      <small *ngIf="nameInput.invalid && nameInput.dirty" class="p-error">Напишите название.</small>
+    </div>
+    <div class="p-field p-col-12">
+    <span class="p-float-label">
+    <textarea id="description" type="text" rows="4" name="description" pInputTextarea
+              [(ngModel)]="formModel.description" required minlength="3" maxlength="250" #descriptionInput="ngModel"
+              [ngClass]="{'p-invalid': (descriptionInput.invalid && submitted) || (descriptionInput.dirty && descriptionInput.invalid)}"></textarea>
+    <label for="description">Описание товара</label>
+    </span>
+      <small *ngIf="descriptionInput.invalid && descriptionInput.dirty" class="p-error">Напиши хоть что нибудь.</small>
+    </div>
+    <div class="p-field p-col-12 p-md-4">
+        <span class="p-float-label">
+          <p-multiSelect name="color" [options]="colorData" [(ngModel)]="formModel.color" placeholder="Выберите цвет"
+                         required #colorInput="ngModel"></p-multiSelect>
+          </span>
+      <small *ngIf="colorInput.invalid && colorInput.dirty" class="p-error">Выберите цвет.</small>
+    </div>
+    <div class="p-field p-col-12 p-md-4">
+    <span class="p-float-label">
+<p-multiSelect  name="size" placeholder="Выберите размер"  [options]="sizeData"
+                [(ngModel)]="formModel.size" required #sizeInput="ngModel"></p-multiSelect>
+      </span>
+      <small *ngIf="sizeInput.invalid && sizeInput.dirty" class="p-error">Выберите размер.</small>
+    </div>
+    <div class="p-field p-col-12 p-md-4">
+    <span class="p-float-label">
+      <p-inputNumber id="price" mode="decimal" [minFractionDigits]="2" [(ngModel)]="formModel.price" name="price"
+                     required #priceInput="ngModel"></p-inputNumber>
+    <label for="price">Цена</label>
+      </span>
+      <small *ngIf="priceInput.invalid && priceInput.dirty" class="p-error">Укажите цену.</small>
+    </div>
+    <div class="p-field p-col-12 p-md-6">
+      <label for="discount">Скидка</label>
+      <p-inputNumber [(ngModel)]="formModel.discount" inputId="percent" prefix="%" name="discount" id="discount">
+      </p-inputNumber>
+    </div>
+    <div *ngIf="formModel.discount > 0" class="p-field p-col-12 p-md-6">
+      <label for="discountUntil">Скидка действует до</label>
+      <p-calendar inputId="basic" [(ngModel)]="formModel.discountUntil" id="discountUntil"
+                  name="discountUntil"></p-calendar>
+    </div>
+    <div class="p-field p-col-12 p-md-12">
+      <h4>Изображение</h4>
+      <span class="p-float-label">
+    <img [src]="imageShow" height="200"> <br/>
+    <input type='file' name="img" id="img" [(ngModel)]="formModel.img" (change)="onFileChanged($event)" required #imgInput="ngModel">
+</span>
+      <small *ngIf="imgInput.invalid && imgInput.dirty" class="p-error">Выберите картинку</small>
+    </div>
+    <div class="p-field p-col-12 p-md-3">
+      <h4>Добавить как главный товар?</h4>
+      <p-inputSwitch [(ngModel)]="formModel.main" name="main"></p-inputSwitch>
+    </div>
+    <div class="p-field p-col-12 p-md-3">
+      <h4>Бесплатная доставка?</h4>
+      <p-inputSwitch [(ngModel)]="formModel.shipping" name="shipping"></p-inputSwitch>
+    </div>
+    <div class="p-field p-col-12 p-md-3">
+      <h4>Новинка?</h4>
+      <p-inputSwitch [(ngModel)]="formModel.novelty" name="novelty"></p-inputSwitch>
+    </div>
+    <div class="p-p-4">
+      <button pButton pRipple type="submit" label="Добавить" class="p-d-block p-mx-auto"
+              [disabled]="f.invalid || submitted"></button>
+    </div>
+  </div>
+</form>

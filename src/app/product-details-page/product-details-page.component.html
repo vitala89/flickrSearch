@@ -1,0 +1,71 @@
+<section *ngIf="product$ | async as product ; else loading" class="product-details" >
+
+  <div class="col">
+    <div class="product-details__img">
+      <ngx-gallery [options]="galleryOptions" [images]="product.imgUrl" class="ngx-gallery"></ngx-gallery>
+      <div class="product-details__zoom">+ <b>zoom</b></div>
+    </div>
+    <div  class="product-details__color-attr">
+      <span *ngFor="let color of product.color" class="">{{color}}/</span>
+    </div>
+
+    <div class="mb50"></div>
+  </div>
+  <div class="col mlr5">
+    <div class="product-details__title">{{ product.name }}</div>
+    <div *ngIf="!showText" class="product-details__description">{{ product.description | truncatetext:100 }}
+      <a (click)="showText = !showText">(Read more)</a>
+    </div>
+    <div *ngIf="showText" class="product-details__description">{{ product.description}}
+      <a (click)="showText = !showText">(Hide)</a>
+    </div>
+    <div class="product-details__price"> {{ product.price | currency:'EUR':'symbol-narrow':'1.0-0' }}</div>
+    <div class="product-details__rating">
+      <ul class="hr">
+        <li>
+          <ng-template #t let-fill="fill">
+  <span class="star" [class.full]="fill === 100">
+    <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
+  </span>
+          </ng-template>
+          <ngb-rating [rate]="getAvRating(product.reviews) | number:'1.1-1'" [starTemplate]="t" [readonly]="true" [max]="5"></ngb-rating>
+        </li>
+        <li><a href="/"><small>({{product.reviews.length}})</small></a></li>
+      </ul>
+    </div>
+    <div class="product-details__review">
+      <div class="read">
+        <a href="/">Read {{product.reviews.length}} reviews</a>
+      </div>
+      <div class="write">
+        <a href="/">Write a review</a>
+      </div>
+    </div>
+    <form class="product-details__form" [formGroup]="form" (ngSubmit)="submit()" >
+      <label class="product-details__label" for="productColor">Color</label>
+      <select (change)="selectChangeColor($event)" class="product-details__select" id="productColor" name="color">
+        <option value="Select color" selected disabled hidden >Select color</option>
+        <option *ngFor="let color of product.color" value="{{color}}">{{color}}</option>
+      </select>
+      <label class="product-details__label" for="productSize">Size</label>
+      <select (change)="selectChangeSize($event)" class="product-details__select" id="productSize" name="size">
+        <option value="Select size" selected disabled hidden>Select size</option>
+        <option *ngFor="let size of product.size" value="{{size}}">{{size}}</option>
+      </select>
+      <p *ngIf="!selectedColor && !selectedSize " class=""><b>Availability:</b> Please select options</p>
+      <p *ngIf="selectedColor || selectedSize " class=""><b>Availability:</b> You selected: <b>{{selectedColor}} {{selectedSize}}</b></p>
+      <label class="product-details__label" for="quantity">Quantity</label><br>
+      <input type="number" class="product-details__input" id="quantity" name="quantity" min="1" max="10" value="1">
+      <button class="product-details__submit" id="addToCart" type="submit" value="Add to cart"><fa-icon [icon]="['fas', 'shopping-cart']"></fa-icon>Add to cart</button>
+      <button  class="product-details__submit"  id="AddToWish" type="submit" value="Add to Wish list"><fa-icon [icon]="['fas', 'magic']"></fa-icon>Add to Wish list</button>
+    </form>
+  </div>
+
+</section>
+<ng-template #loading>
+  <div class="center">
+    <p-progressSpinner></p-progressSpinner>
+    <br>
+    Загрузка...
+  </div>
+</ng-template>

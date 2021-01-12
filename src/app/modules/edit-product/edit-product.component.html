@@ -1,0 +1,94 @@
+<h3>Редактировать Товар</h3>
+<div *ngIf="form; else loading">
+<form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+  <div class="p-fluid p-formgrid p-grid">
+
+    <div class="p-field p-col-12 p-md-12">
+<span class="p-float-label">
+    <input id="name" type="text" name="name" pInputText formControlName="name" required maxlength="50" minlength="3">
+    <label for="name">Название товара</label>
+</span>
+      <div *ngIf="form.get('name').touched && form.get('name').invalid" class="p-invalid">
+        <small *ngIf="form.get('name').errors.required">Напишите название.</small>
+      </div>
+    </div>
+
+    <div class="p-field p-col-12">
+    <span class="p-float-label">
+    <textarea id="description" type="text" rows="4" name="description" pInputTextarea
+              formControlName="description" required minlength="3" maxlength="250"></textarea>
+    <label for="description">Описание товара</label>
+    </span>
+      <div *ngIf="form.get('description').touched && form.get('description').invalid" class="p-invalid">
+        <small *ngIf="form.get('description').errors.required">Напишите название.</small>
+      </div>
+    </div>
+
+    <div class="p-field p-col-12 p-md-4">
+        <span class="p-float-label">
+          <p-multiSelect name="color" [options]="colorData" formControlName="color" placeholder="Выберите цвет"
+          ></p-multiSelect>
+          </span>
+      <div *ngIf="form.get('color').touched && form.get('color').invalid" class="p-invalid">
+        <small *ngIf="form.get('color').errors.required">Выберите цвет.</small>
+      </div>
+    </div>
+    <div class="p-field p-col-12 p-md-4">
+    <span class="p-float-label">
+<p-multiSelect  name="size" placeholder="Выберите размер"  [options]="sizeData"
+                formControlName="size" required ></p-multiSelect>
+      </span>
+      <div *ngIf="form.get('size').touched && form.get('size').invalid" class="p-invalid">
+        <small *ngIf="form.get('size').errors.required">Выберите размер.</small>
+      </div>
+    </div>
+
+    <div class="p-field p-col-12 p-md-4">
+    <span class="p-float-label">
+      <p-inputNumber id="price" mode="decimal" [minFractionDigits]="2" formControlName="price" name="price"
+                     required ></p-inputNumber>
+    <label for="price">Цена</label>
+      </span>
+      <div *ngIf="form.get('price').touched && form.get('price').invalid" class="p-invalid">
+        <small *ngIf="form.get('price').errors.required">Укажите цену</small>
+      </div>
+    </div>
+    <div class="p-field p-col-12 p-md-6">
+      <label for="discount">Скидка</label>
+      <p-inputNumber formControlName="discount" inputId="percent" prefix="%" name="discount" id="discount">
+      </p-inputNumber>
+    </div>
+    <div *ngIf="product.discount > 0" class="p-field p-col-12 p-md-6">
+      <label for="discountUntil">Скидка действует до</label>
+      <p-calendar inputId="basic" formControlName="discountUntil" id="discountUntil"
+                  name="discountUntil"></p-calendar>
+    </div>
+    <div class="p-field p-col-12 p-md-3">
+      <h4>Добавить как главный товар?</h4>
+      <p-inputSwitch formControlName="main" name="main"></p-inputSwitch>
+    </div>
+    <div class="p-field p-col-12 p-md-3">
+      <h4>Бесплатная доставка?</h4>
+      <p-inputSwitch formControlName="shipping" name="shipping"></p-inputSwitch>
+    </div>
+    <div class="p-field p-col-12 p-md-3">
+      <h4>Новинка?</h4>
+      <p-inputSwitch formControlName="novelty" name="novelty"></p-inputSwitch>
+    </div>
+    <div class="p-field p-col-12 p-md-12">
+      <h4>Изображение</h4>
+      <span class="p-float-label">
+    <img [src]="" height="200"> <br/>
+    <input type='file' name="img" id="img" formControlName="img"  (change)="onFileChanged($event)">
+</span>
+    </div>
+    <div class="p-p-4">
+      <button pButton pRipple type="submit" label="Обновить" class="p-d-block p-mx-auto"
+              [disabled]="form.invalid || submitted"></button>
+    </div>
+  </div>
+</form>
+</div>
+  <ng-template #loading>
+    <p class="text-center">Loading...</p>
+  </ng-template>

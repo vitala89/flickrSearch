@@ -1,0 +1,48 @@
+@import '../../../../../node_modules/bootstrap/scss/bootstrap';
+.orderPage{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  &__title{
+    text-align: center;
+  }
+}
+
+.ml5{
+  margin-left: 5px;
+}
+.button-container{
+  margin-left: 15px;
+}
+
+.desc{
+  margin-top: 10px;
+}
+
+textarea{
+  min-height: 150px;
+}
+
+.image{
+  width: 115px;
+}
+.media{
+  margin-top: 10px;
+}
+.text-bold{
+font-weight: bold;
+}
+.form-details-list{
+  list-style-type: none
+}
+
+h5{
+font-weight: bold;
+}
+.validation-error{
+  margin-left: 15px;
+  margin-top: -15px;
+  font-size: 14px;
+  color: red;
+}

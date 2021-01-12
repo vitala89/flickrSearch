@@ -1,0 +1,60 @@
+<div class="container">
+<main class="main">
+  <div *ngIf="products as products else loading" class="product">
+    <!-- Orange Card_1-->
+
+    <a *ngFor="let product of products"
+       class="product__link "
+       [class.product__link--red]="product.main === true"
+       [class.product__link--pink]="product.discount > 50"
+       [class.product__link--yellow]="product.discount < 50"
+       [class.top__block]="product.main === true"
+       [class.top__block1]="product.main === false"
+       [title]="product.name" [routerLink]="['/product-details-page', product.id]">
+      <article class="topcard">
+        <aside class="topcard__aside">
+          <figure class="topcard__figure"><img class="topcard__image" [class.p60]="product.main === true"  src="{{ product.img }}" alt="{{ product.name }}"></figure>
+        </aside>
+        <div *ngIf="product.new === true" class="topcard__sticker topcard__sticker--orange">Новинка</div>
+        <div *ngIf="product.discount > 0" class="topcard__sticker-disc"
+             [class.topcard__sticker-disc--red]="product.main === true"
+             [class.topcard__sticker-disc--pink]="product.discount > 50"
+             [class.topcard__sticker-disc--yellow]="product.discount < 50">
+
+          Скидка {{ product.discount }} %</div>
+        <div class="topcard__header">
+          <div class="topcard__title">{{ product.name }}</div>
+          <div class="topcard__price"
+               [class.topcard__price--red]="product.main === true"
+               [class.topcard__price--pink]="product.discount > 50"
+               [class.topcard__price--yellow]="product.discount < 50">
+            {{ product.price | currency:'EUR':'symbol-narrow':'1.0-0' }} </div>
+        </div>
+        <div class="topcard__line"></div>
+        <div class="topcard__body">
+          <div class="topcard__content">{{ product.description | truncatetext:100 }}</div>
+        </div>
+        <div class="topcard__footer">
+          <div class="topcard__line"></div>
+          <div class="topcard__action">
+            <div *ngIf="product.shipping === true" class="topcard__item item-delivery">Бесплатная доставка</div>
+            <div *ngIf="product.novelty === true" class="topcard__item item-new">Новинка</div>
+            <div *ngIf="product.discountUntil" class="topcard__item item-new">Скидка до:{{product.discountUntil | date: 'dd/MM/yyyy'}}</div>
+          </div>
+          <div class="topcard__button">
+            <button class="topcard__button button-main">Подробнее...</button>
+          </div>
+        </div>
+      </article>
+    </a>
+    </div>
+
+</main>
+</div>
+<ng-template #loading>
+  <div class="center">
+    <p-progressSpinner></p-progressSpinner>
+    <br>
+    Загрузка...
+  </div>
+</ng-template>

@@ -1,0 +1,91 @@
+
+.block-1 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background: #E5E5E5;
+
+  &__title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    .h1 {
+      width: 100%;
+    }
+  }
+}
+
+.block-2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &__description {
+    width: 100%;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  &__button{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+}
+.block-3{
+  display: flex;
+  width: 100%;
+  &__image{
+    display: flex;
+    width: 100%;
+  }
+}
+.block-4{
+  &__title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+.block-5 {
+  &__title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  &__button{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+}
+.image{
+  display: block;
+  width: 100%;
+}
+
+ul li{
+  list-style-type: none;
+}
+.pi-check{
+  font-size: 1.2rem;
+  position: relative;
+  top: 3px;
+  right: 5px;
+  color: blueviolet;
+}
+
+  .p-breadcrumb ul li:last-child .p-menuitem-text {
+    color: rgba(117, 54, 214, 0.87);
+    font-weight: bold;
+  }
+  .p-datatable-header{
+    background: #9769E2;
+    color: white;
+  }
+  .p-accordion .p-accordion-header:not(.p-disabled).p-highlight .p-accordion-header-link{
+    background: #9769E2;
+    color: white;
+  }
+

@@ -1,0 +1,141 @@
+<div class="wrapper">
+  <p-breadcrumb [model]="items" [home]="home"></p-breadcrumb>
+  <div class="p-grid">
+    <div class="p-col-12 p-p-0">
+      <div class="block-1">
+        <div class="block-1__title">
+          <h1>Уборка магазина</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-grid">
+    <div class="p-col-12">
+      <div class="block-2">
+        <div class="block-2__description">
+          <p class="description">Магазины каждый день посещают сотни посетителей. При таком большом потоке сохранение порядка и чистоты становится настоящей проблемой для руководителей магазинов. Магазины нуждаются в уборке утром и вечером, а также и на протяжении всего дня. Особенно это актуально в дождливую или снежную погоду. Чтобы решить данную проблему, многие руководители магазинов уже начали пользоваться услугами клининговой компании “KIMCLEANING”.</p>
+        </div>
+      </div>
+      <div class="p-col-12">
+        <div class="block-2__button">
+          <div class="sizes">
+            <p-button label="Рассчитать стоимость" icon="pi pi-dollar" styleClass="p-button-lg"></p-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-grid">
+    <div class="p-col-12">
+      <div class="block-3">
+        <div class="block-3__image">
+          <img class="image" src="assets/img/28.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-grid">
+    <div class="p-col-12">
+      <div class="block-4">
+        <div class="block-4__title">
+          <h1>Профессиональная уборка магазинов в Москве</h1>
+        </div>
+        <div class="block-4__description">
+          <p>Клининговая компания «KIMCLEANING» с легкостью избавит вас от хлопот по уборке магазинов!</p>
+        </div>
+        <div class="block-4__title">
+          <h1>Что входит в уборку магазина?</h1>
+        </div>
+        <div class="block-4__description">
+          <ul>
+            <li><i class="pi pi-check"></i>Уборка всех поверхностей (сухая, влажная) помещения.</li>
+            <li><i class="pi pi-check"></i>Мойка окон и зеркал.</li>
+            <li><i class="pi pi-check"></i>Чистка мебели, оборудования.</li>
+            <li><i class="pi pi-check"></i>Дезинфекция, мойка санузлов, раковин.</li>
+            <li><i class="pi pi-check"></i>Уборку административных помещений.</li>
+            <li><i class="pi pi-check"></i>Клининг технических помещений.</li>
+            <li><i class="pi pi-check"></i>Вынос всего мусора.</li>
+          </ul>
+          <p>Стоимость уборки магазина в Москве зависит от площади всей территории магазина, выбранных заказчиком услуг, необходимых видов уборки, количества загрязнений, используемого оборудования и моющих средств</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-grid">
+    <div class="block-5">
+      <div class="p-col-12">
+        <div class="p-col-12">
+          <div class="block-5__description">
+            <p>Хотите заказать уборку магазина в Москве? «KIMCLEANING» предлагает Вам сотрудничество на очень выгодных условиях!</p>
+          </div>
+        </div>
+        <div class="p-col-12">
+          <div class="block-5__button">
+            <div class="sizes">
+              <p-button label="Рассчитать стоимость" icon="pi pi-dollar" styleClass="p-button-lg"></p-button>
+            </div>
+          </div>
+        </div>
+        <div class="p-grid">
+
+          <div class="p-col-12">
+            <div class="block-5__title">
+              <h1>ПОПУЛЯРНЫЕ ВОПРОСЫ</h1>
+            </div>
+            <div class="block-5__faq">
+              <p-accordion>
+                <p-accordionTab header="Сколько людей придет, чтобы убрать мой дом?" [(selected)]="activeState[0]">
+                  <p>В среднем для помещения выделяется около 2-3 человек. На большие площади выделяется около 5. Всё зависит только от вас! Если вам необходимо произвести уборку в сжатые сроки — мы выделим необходимое количество человек для того, что бы успеть вовремя!</p>
+                </p-accordionTab>
+                <p-accordionTab header="Должен ли я присутствовать на уборке?" [(selected)]="activeState[1]">
+                  <p>Это не обязательно. Вы можете как присутствовать, так и просто оставить ключи и приехать только к моменту завершения работ.</p>
+                </p-accordionTab>
+                <p-accordionTab header="Сколько времени займет мой дом?" [(selected)]="activeState[2]">
+                  <p>В зависимости от площади от 1 до 3 рабочих дней. Рабочий день длиться с 9.00 до 18.00.
+                    Если такой график Вас не устраивает – мы всегда готовы обсудить удобное вам время.</p>
+                </p-accordionTab>
+              </p-accordion>
+            </div>
+          </div>
+          <div class="p-col-12  p-md-6">
+            <div class="block-5__title">
+              <h2>МЫ ГАРАНТИРУЕМ</h2>
+            </div>
+            <div class="block-5__description">
+              <p>Наша репутация важна для нас. Мы сделаем всё возможное для того, что бы завершить работу в оговоренные сроки и сделать это максимально качественно. Если результат нашей работы не удовлетворил вас – мы всегда рады выслушать ваши замечания и заново вернуться в те места, где по вашему мнению уделили не достаточно внимания.</p>
+            </div>
+          </div>
+          <div class="p-col-12  p-md-6">
+            <div class="block-5__title">
+              <h2>НАША МИССИЯ</h2>
+            </div>
+            <div class="block-5__description">
+              <ul>
+                <li><i class="pi pi-check"></i>Предоставлять высококачественные услуги</li>
+                <li><i class="pi pi-check"></i>Экономия вашего времени</li>
+                <li><i class="pi pi-check"></i>Использовать только качественные средства</li>
+                <li><i class="pi pi-check"></i>Обеспечить стабильные рабочие места</li>
+                <li><i class="pi pi-check"></i>Никаких повреждений вашей мебели или технике</li>
+                <li><i class="pi pi-check"></i>Удивить вас</li>
+              </ul>
+            </div>
+          </div>
+          <div class="p-col-12">
+            <div class="block-5__title">
+              <h2>Удобное и эффективное сотрудничество</h2>
+            </div>
+            <div class="block-5__description">
+              <p>Вашему магазину необходима качественная генеральная уборка? Нужно срочно подготовить магазин? После работы наших мастеров любой магазин засияет свежестью и чистотой! </p>
+              <p>Чтобы заказать уборку магазина в Москве или получить дополнительную консультацию свяжитесь с нами онлайн или звоните по указанным телефонам.</p>
+              <div class="block-5__button">
+                <div class="sizes">
+                  <p-button label="Оставить заявку" styleClass="p-button-lg"></p-button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

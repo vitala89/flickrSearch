@@ -1,0 +1,92 @@
+<div class="p-grid">
+  <div class="p-col-12 p-p-0">
+    <div class="block-1">
+      <div class="block-1__title">
+        <h1>Заказы</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="p-grid">
+  <div class="p-col-12">
+    <div class="order-page">
+      <p-table *ngIf="orders.length; else empty" [value]="orders" styleClass="p-datatable-striped">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Дата заказа</th>
+            <th>Имя</th>
+            <th>Телефон</th>
+            <th>Услуга</th>
+            <th>Помещение</th>
+            <th>Площадь(м2)</th>
+            <th>Санузлов</th>
+            <th>Уборка кухни</th>
+            <th>Мытье окон</th>
+            <th>Химчистка</th>
+            <th>Действие</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-order>
+          <tr>
+            <td>{{order.date | date: 'dd/MM/yyyy'}}</td>
+            <td>{{order.name}}</td>
+            <td>{{order.phone}}</td>
+            <td>{{order.service.name}}</td>
+            <td>{{order.place.name}}</td>
+            <td>{{order.meters}}</td>
+            <td>{{order.toilet}}</td>
+            <td>{{order.kitchen.name}}</td>
+            <td>{{order.window.name}}</td>
+            <td>{{order.dryCleaning.name}}</td>
+            <td><button pButton type="button" label="Удалить" icon="pi pi-trash" (click)="remove(order.id)"></button></td>
+          </tr>
+        </ng-template>
+      </p-table>
+      <ng-template #empty>
+        <div class="p-text-center">
+          <h2>Заказов нет</h2>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>
+<div class="p-grid">
+  <div class="p-col-12 p-p-0">
+    <div class="block-1">
+      <div class="block-1__title">
+        <h1>Feedbacks</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="p-grid">
+  <div class="p-col-12">
+    <div class="order-page">
+      <p-table *ngIf="feedback.length; else emptyF" [value]="feedback" styleClass="p-datatable-striped">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>Дата заказа</th>
+            <th>Имя</th>
+            <th>Телефон</th>
+            <th>Сообщение</th>
+            <th>Действие</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-feedback>
+          <tr>
+            <td>{{feedback.date | date: 'dd/MM/yyyy'}}</td>
+            <td>{{feedback.firstname}}</td>
+            <td>{{feedback.phone}}</td>
+            <td>{{feedback.text}}</td>
+            <td><button pButton type="button" label="Удалить" icon="pi pi-trash" (click)="removeFeedback(feedback.id)"></button></td>
+          </tr>
+        </ng-template>
+      </p-table>
+      <ng-template #emptyF>
+        <div class="p-text-center">
+          <h2>Записей нет</h2>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>

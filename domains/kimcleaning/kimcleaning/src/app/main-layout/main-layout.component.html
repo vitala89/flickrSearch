@@ -1,0 +1,22 @@
+<header>
+<p-menubar [model]="items">
+  <ng-template  pTemplate="start"><a class="header__link" href="/"><img src="assets/img/logosvg.svg" height="40" class="p-mr-2"></a>
+    <span class="logo-text">KIMCLEANING</span>
+  </ng-template>
+  <ng-template pTemplate="end">
+    <a href="tel:+79808888790" class="topbar__phone">+7(980)8888-790</a>
+  </ng-template>
+</p-menubar>
+</header>
+<router-outlet></router-outlet>
+<footer>
+  <div class="p-grid">
+    <div class="p-col-12">
+<div class="footer__text">
+<p class="p-text-center">&copy; 2015 — 2021 Клининговая компания «KIMCLEANING». Все права защищены!</p>
+  <p class="p-text-center">Made by <a href="https://www.vitaliikasap.com">vitaliikasap.com</a></p>
+</div>
+    </div>
+  </div>
+</footer>
+

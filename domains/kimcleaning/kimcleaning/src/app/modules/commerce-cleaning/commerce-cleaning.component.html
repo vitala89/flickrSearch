@@ -1,0 +1,153 @@
+<div class="wrapper">
+  <p-breadcrumb [model]="items" [home]="home"></p-breadcrumb>
+  <div class="p-grid">
+    <div class="p-col-12 p-p-0">
+      <div class="block-1">
+        <div class="block-1__title">
+          <h1>Уборка коммерческих помещений</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-grid">
+    <div class="p-col-12">
+      <div class="block-2">
+        <div class="block-2__description">
+          <p class="description">Как известно, чистота — это залог здоровья и хорошего настроения. Периодическая уборка коммерческих помещений на договорной основе избавит вас от многих проблем. Вам не придется заботиться о контроле качества клининга, поскольку мы всегда выполняем наши обязанности на высоком уровне. Вы забудете о проблеме поиска квалифицированного вспомогательного персонала.</p>
+        </div>
+      </div>
+      <div class="p-col-12">
+        <div class="block-2__button">
+          <div class="sizes">
+            <p-button label="Рассчитать стоимость" icon="pi pi-dollar" styleClass="p-button-lg"></p-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-grid">
+    <div class="p-col-12">
+      <div class="block-3">
+        <div class="block-3__image">
+          <img class="image" src="assets/img/26.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-grid">
+    <div class="p-col-12">
+      <div class="block-4">
+        <div class="block-4__title">
+          <h1>Профессиональная уборка коммерческих помещений в Москве</h1>
+        </div>
+        <div class="block-4__description">
+          <p>Регулярная уборка помещений осуществляется в любое удобное для клиента время — утро или же вечер, день или ночь. При необходимости сотрудники нашей компании будут поддерживать чистоту в помещении на протяжении всего рабочего дня.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-grid">
+    <div class="block-5">
+      <div class="p-col-12">
+        <div class="p-col-12">
+          <div class="block-5__description">
+            <p>Хотите заказать уборку помещений в Москве? «KIMCLEANING» предлагает Вам сотрудничество на очень выгодных условиях!</p>
+          </div>
+        </div>
+        <div class="p-col-12">
+          <div class="block-5__button">
+            <div class="sizes">
+              <p-button label="Рассчитать стоимость" icon="pi pi-dollar" styleClass="p-button-lg"></p-button>
+            </div>
+          </div>
+        </div>
+        <div class="p-grid">
+          <div class="p-col-12">
+            <div class="block-5__title">
+              <h1>ПРАЙС-ЛИСТ</h1>
+            </div>
+            <div class="block-5__table">
+              <p-table  styleClass="p-datatable-striped p-datatable-gridlines">
+                <ng-template pTemplate="caption">
+                  Уборка помещений
+                </ng-template>
+                <ng-template pTemplate="header">
+                  <tr>
+                    <th>Наименование</th>
+                    <th>Цена</th>
+                  </tr>
+                </ng-template>
+                <ng-template pTemplate="summary">
+                  <p>**Сколько стоят услуги зависит от площади, степени загрязнения, фронта работ. Чтобы узнать более точную информацию или заказать профессиональную уборку, звоните нам по телефону <a href="tel:+79808888790">+7(980)8888-790</a> или оставьте заявку на сайте.</p>
+                </ng-template>
+              </p-table>
+            </div>
+          </div>
+          <div class="p-col-12">
+            <div class="block-5__button">
+              <div class="sizes">
+                <p-button label="Рассчитать стоимость" icon="pi pi-dollar" styleClass="p-button-lg"></p-button>
+              </div>
+            </div>
+          </div>
+          <div class="p-col-12">
+            <div class="block-5__title">
+              <h1>ПОПУЛЯРНЫЕ ВОПРОСЫ</h1>
+            </div>
+            <div class="block-5__faq">
+              <p-accordion>
+                <p-accordionTab header="Сколько людей придет, чтобы убрать мой дом?" [(selected)]="activeState[0]">
+                  <p>В среднем для помещения выделяется около 2-3 человек. На большие площади выделяется около 5. Всё зависит только от вас! Если вам необходимо произвести уборку в сжатые сроки — мы выделим необходимое количество человек для того, что бы успеть вовремя!</p>
+                </p-accordionTab>
+                <p-accordionTab header="Должен ли я присутствовать на уборке?" [(selected)]="activeState[1]">
+                  <p>Это не обязательно. Вы можете как присутствовать, так и просто оставить ключи и приехать только к моменту завершения работ.</p>
+                </p-accordionTab>
+                <p-accordionTab header="Сколько времени займет мой дом?" [(selected)]="activeState[2]">
+                  <p>В зависимости от площади от 1 до 3 рабочих дней. Рабочий день длиться с 9.00 до 18.00.
+                    Если такой график Вас не устраивает – мы всегда готовы обсудить удобное вам время.</p>
+                </p-accordionTab>
+              </p-accordion>
+            </div>
+          </div>
+          <div class="p-col-12  p-md-6">
+            <div class="block-5__title">
+              <h2>МЫ ГАРАНТИРУЕМ</h2>
+            </div>
+            <div class="block-5__description">
+              <p>Наша репутация важна для нас. Мы сделаем всё возможное для того, что бы завершить работу в оговоренные сроки и сделать это максимально качественно. Если результат нашей работы не удовлетворил вас – мы всегда рады выслушать ваши замечания и заново вернуться в те места, где по вашему мнению уделили не достаточно внимания.</p>
+            </div>
+          </div>
+          <div class="p-col-12  p-md-6">
+            <div class="block-5__title">
+              <h2>НАША МИССИЯ</h2>
+            </div>
+            <div class="block-5__description">
+              <ul>
+                <li><i class="pi pi-check"></i>Предоставлять высококачественные услуги</li>
+                <li><i class="pi pi-check"></i>Экономия вашего времени</li>
+                <li><i class="pi pi-check"></i>Использовать только качественные средства</li>
+                <li><i class="pi pi-check"></i>Обеспечить стабильные рабочие места</li>
+                <li><i class="pi pi-check"></i>Никаких повреждений вашей мебели или технике</li>
+                <li><i class="pi pi-check"></i>Удивить вас</li>
+              </ul>
+            </div>
+          </div>
+          <div class="p-col-12">
+            <div class="block-5__title">
+              <h1>Удобное и эффективное сотрудничество</h1>
+            </div>
+            <div class="block-5__description">
+              <p>Вашему помещению необходима качественная генеральная уборка? После работы наших мастеров любое помещение засияет свежестью и чистотой! </p>
+              <p>Чтобы заказать уборку помещений в Москве или получить дополнительную консультацию свяжитесь с нами онлайн или звоните по указанным телефонам.</p>
+              <div class="block-5__button">
+                <div class="sizes">
+                  <p-button label="Оставить заявку" styleClass="p-button-lg"></p-button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

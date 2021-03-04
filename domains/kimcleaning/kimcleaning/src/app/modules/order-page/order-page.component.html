@@ -1,0 +1,114 @@
+<div class="wrapper">
+  <p-breadcrumb [model]="items" [home]="home"></p-breadcrumb>
+  <div class="p-grid">
+    <div class="p-col-12 p-p-0">
+      <div class="block-1">
+        <div class="block-1__title">
+          <h1>Заказать</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-grid">
+    <div class="p-col-12">
+      <div class="order-page">
+        <form [formGroup]="form" (ngSubmit)="submit()">
+          <div class="form-control">
+            <div class="p-field p-grid p-mb-3">
+              <label class="p-col-fixed" style="width:200px">Выберите услугу</label>
+              <div class="p-col">
+                <p-dropdown formControlName="service" name="services" [options]="services"
+                            [(ngModel)]="selectedServices" optionLabel="name" placeholder="Выберите услугу"
+                            optionDisabled="inactive"></p-dropdown>
+                <div *ngIf="form.get('service').touched && form.get('service').invalid" class="validation">
+                  <small *ngIf="form.get('service').errors.required" class="p-error">Выберите услугу</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-control">
+            <div class="p-field p-grid p-mb-3">
+              <label class="p-col-fixed" style="width:200px">Помещение</label>
+              <div class="p-col">
+                <p-dropdown formControlName="place" name="place" [options]="place" [(ngModel)]="selectedPlace"
+                            optionLabel="name" placeholder="Выберите помещение" optionDisabled="inactive"></p-dropdown>
+              </div>
+            </div>
+          </div>
+          <div class="form-control">
+            <div class="p-field p-grid p-mb-3">
+              <label class="p-col-fixed" style="width:200px">Укажите площадь</label>
+              <div class="p-col">
+                <p-inputNumber formControlName="meters" [(ngModel)]="meters" [showButtons]="true" inputId="mile"
+                               suffix=" м2">
+                </p-inputNumber>
+              </div>
+            </div>
+          </div>
+          <div class="form-control">
+            <div class="p-field p-grid p-mb-3">
+              <label class="p-col-fixed" style="width:200px">Сколько у вас санузлов</label>
+              <div class="p-col">
+                <p-inputNumber formControlName="toilet" [(ngModel)]="toilet" [showButtons]="true">
+                </p-inputNumber>
+              </div>
+            </div>
+          </div>
+          <div class="form-control">
+            <div class="p-field p-grid p-mb-3">
+              <label class="p-col-fixed" style="width:200px">Степень уборки кухни</label>
+              <div class="p-col">
+                <p-dropdown formControlName="kitchen" name="place" [options]="kitchen" [(ngModel)]="selectedKitchen"
+                            optionLabel="name" placeholder="Выберите степень уборки кухни"
+                            optionDisabled="inactive"></p-dropdown>
+              </div>
+            </div>
+          </div>
+          <div class="form-control">
+            <div class="p-field p-grid p-mb-3">
+              <label class="p-col-fixed" style="width:200px">Мытье окон</label>
+              <div class="p-col">
+                <p-dropdown formControlName="window" name="place" [options]="window" [(ngModel)]="selectedWindow"
+                            optionLabel="name" placeholder="Выберите мытье окон" optionDisabled="inactive"></p-dropdown>
+              </div>
+            </div>
+          </div>
+          <div class="form-control">
+            <div class="p-field p-grid p-mb-3">
+              <label class="p-col-fixed" style="width:200px">Химчистка</label>
+              <div class="p-col">
+                <p-dropdown formControlName="dryCleaning" name="place" [options]="dryCleaning"
+                            [(ngModel)]="selectedDryCleaning" optionLabel="name" placeholder="Выберите химчистку"
+                            optionDisabled="inactive"></p-dropdown>
+              </div>
+            </div>
+          </div>
+          <div class="form-control">
+            <div class="p-field p-grid p-mb-3">
+              <label class="p-col-fixed" style="width:200px">Ваше имя</label>
+              <div class="p-col">
+                <input formControlName="name" type="name" maxlength="30" pInputText/>
+              </div>
+            </div>
+          </div>
+          <div class="form-control">
+            <div class="p-field p-grid p-mb-3">
+              <label class="p-col-fixed" style="width:200px">Ваш номер телефона</label>
+              <div class="p-col">
+                <p-inputMask formControlName="phone" mask="+7(999)9999-999" [(ngModel)]="value4"
+                             placeholder="(980) 9999-999"></p-inputMask>
+              </div>
+            </div>
+          </div>
+          <div class="p-field p-grid p-mb-3">
+            <div class="p-col">
+              <p-button type="submit" (click)="showTopCenter()" label="Заказать" icon="pi pi-check" iconPos="right"
+                        [disabled]="form.invalid || submitted"></p-button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<p-toast position="top-center" key="tc"></p-toast>

@@ -1,0 +1,100 @@
+{
+  "data": [
+    {
+      "id": "1000",
+      "code": "f230fh0g3",
+      "name": "Генеральная уборка",
+      "description": "Полные услуги по уборке жилых и коммерческих помещений, любой сложности, профессионалами своего дела!",
+      "image": "2.webp",
+      "price": 65,
+      "category": "Accessories",
+      "quantity": 24,
+      "inventoryStatus": "INSTOCK",
+      "rating": 5
+    },
+    {
+      "id": "1000",
+      "code": "f230fh0g3",
+      "name": "Уборка после ремонта",
+      "description": "От строительной пыли не так-то просто избавиться! В решении этой проблемы мы придем вам на помощь",
+      "image": "3.webp",
+      "price": 65,
+      "category": "Мойка окон, витрин, фасадов",
+      "quantity": 24,
+      "inventoryStatus": "INSTOCK",
+      "rating": 5
+    },
+    {
+      "id": "1000",
+      "code": "f230fh0g3",
+      "name": "Мойка окон, витрин, фасадов",
+      "description": "Чистые и прозрачные стекла без разводов! Доверьте мойку ваших окон, витрин и фасадов квалифицированным специалистам!",
+      "image": "4.webp",
+      "price": 65,
+      "category": "Мойка окон, витрин, фасадов",
+      "quantity": 24,
+      "inventoryStatus": "INSTOCK",
+      "rating": 5
+    },
+    {
+      "id": "1000",
+      "code": "f230fh0g3",
+      "name": "Химчистка мягкой мебели и ковров",
+      "description": "Потерявший свой цвет засаленный диван? Ковер в пятнах? Мы всё исправим!",
+      "image": "5.webp",
+      "price": 65,
+      "category": "Accessories",
+      "quantity": 24,
+      "inventoryStatus": "INSTOCK",
+      "rating": 5
+    },
+    {
+      "id": "1000",
+      "code": "f230fh0g3",
+      "name": "Уборка частных домов и квартир",
+      "description": "Быстро и качественно восстановим чистоту в вашем доме или квартире",
+      "image": "7.jpg",
+      "price": 65,
+      "category": "Accessories",
+      "quantity": 24,
+      "inventoryStatus": "INSTOCK",
+      "rating": 5
+    },
+    {
+      "id": "1000",
+      "code": "f230fh0g3",
+      "name": "Уборка офисов",
+      "description": "За короткий срок выполним все поставленные задачи на максимально качественном уровне",
+      "image": "8.jpg",
+      "price": 65,
+      "category": "Accessories",
+      "quantity": 24,
+      "inventoryStatus": "INSTOCK",
+      "rating": 5
+    },
+    {
+      "id": "1000",
+      "code": "f230fh0g3",
+      "name": "Мытье посуды",
+      "description": "Если Вы не любите мыть посуду или же просто не хотите её мыть, то это сделает наш клинер.",
+      "image": "9.jpg",
+      "price": 65,
+      "category": "Accessories",
+      "quantity": 24,
+      "inventoryStatus": "INSTOCK",
+      "rating": 5
+    },
+    {
+      "id": "1000",
+      "code": "f230fh0g3",
+      "name": "Влажная уборка",
+      "description": "Самый лучший способ борьбы с пылью - это регулярная влажная уборка. Эффективно удалим пыль со всех поверхностей",
+      "image": "10.jpg",
+      "price": 65,
+      "category": "Accessories",
+      "quantity": 24,
+      "inventoryStatus": "INSTOCK",
+      "rating": 5
+    }
+  ]
+}

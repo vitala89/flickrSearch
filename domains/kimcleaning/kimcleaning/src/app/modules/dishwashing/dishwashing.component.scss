@@ -1,0 +1,17 @@
+.p-grid{
+  margin: 0;
+}
+:host ::ng-deep {
+  .p-breadcrumb ul li:last-child .p-menuitem-text {
+    color: rgba(117, 54, 214, 0.87);
+    font-weight: bold;
+  }
+  .p-datatable-header{
+    background: #9769E2;
+    color: white;
+  }
+  .p-accordion .p-accordion-header:not(.p-disabled).p-highlight .p-accordion-header-link{
+    background: #9769E2;
+    color: white;
+  }
+}

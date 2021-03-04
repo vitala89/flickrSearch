@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.content {
+  flex: 1 0 auto;
+}
+.p-grid{
+  margin: 0;
+}
+.logo-text{
+  display: inline-block;
+  position: relative;
+  bottom: 10px;
+  font-size: 20px;
+}
+.wrapper {
+  display: block;
+  position: relative;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+footer{
+  display: flex;
+  flex: 0 0 auto;
+  background: #343C3E;
+  width: 100%;
+  color: #B6BDBF;
+  justify-content: center;
+  margin-top: 1px;
+  padding: 20px 0;
+}
+a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  &:hover{
+    color: #9769E2;
+    font-weight: bold;
+  }
+}
+.topbar{
+  &__phone{
+    color: black;
+    font-weight: bold;
+  }
+}
+
+:host::ng-deep{
+  .p-menubar .p-submenu-list{
+    width: 19.5rem;
+  }
+}

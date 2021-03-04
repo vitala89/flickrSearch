@@ -1,0 +1,252 @@
+<div class="wrapper">
+  <div class="p-grid">
+    <div class="p-col-12">
+      <div class="first-block">
+        <div class="first-block__image">
+          <img src="assets/img/1.jpg" alt="cleaning">
+        </div>
+        <div class="first-block__text">
+          <div class="text__first">Удобно, просто, выгодно</div>
+          <div class="text__second">Профессиональная уборка в вашем доме и офисе</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-grid">
+    <div class="p-col-12">
+      <div class="second-block">
+        <div class="second-block__title">
+          <h1 class="title__h1">КЛИНИНГОВАЯ КОМПАНИЯ «KIMCLEANING» — ЛУЧШИЙ КЛИНИНГ В МОСКВЕ</h1>
+        </div>
+        <div class="second-block__description">
+          <p class="description__text">
+            Клининговая компания KIMCLEANING — предоставляет полный спектр клининговых услуг в Москве по лучшим ценам.
+            Для бизнеса и частных лиц. Профессионально выполняем генеральную уборку жилых, офисных и торговых помещений,
+            мойку окон, витрин и фасадов, химчистку мягкой мебели — разово и на постоянной основе. Заказывайте клининг в
+            Москве от профессионалов KIMCLEANING с проверенной репутацией и мы сделаем Вам уборку быстро и качественно.
+            Отправьте нам заявку и мы оперативно рассчитаем Вам стоимость уборки любого объёма!
+          </p>
+        </div>
+        <div class="second-block__button">
+          <div class="sizes">
+            <p-button label="Рассчитать стоимость" icon="pi pi-dollar" styleClass="p-button-lg"></p-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-grid">
+    <div class="p-col-12">
+      <div class="third-block">
+        <div class="third-block__title">
+          <h1 class="title__h1">КЛИНИНГОВЫЕ УСЛУГИ В МОСКВЕ</h1>
+        </div>
+        <div class="third-block__description">
+          <p class="description__text">
+            Вы хотите, чтобы у вас было больше свободного времени? Мы можем это сделать!
+            Закажите наши клининговые услуги и инвестируйте свое время в приятные и полезные дела!
+          </p>
+        </div>
+        <div class="third-block__button">
+          <div class="sizes">
+            <p-button label="Цены на услуги" icon="pi pi-dollar" styleClass="p-button-lg"></p-button>
+          </div>
+        </div>
+        <div class="third-block__carousel">
+          <p-carousel [value]="products" [numVisible]="3" [numScroll]="3" [autoplayInterval]="3000" [circular]="false"
+                      [responsiveOptions]="responsiveOptions">
+            <ng-template let-product pTemplate="item">
+              <div class="product-item">
+                <div class="product-item-content">
+                  <div class="p-mb-3">
+                    <img src="assets/img/{{product.image}}" [alt]="product.name" class="product-image"/>
+                  </div>
+                  <div>
+                    <h4 class="p-mb-1">{{product.name}}</h4>
+                    <h5 class="p-mt-0 p-mb-3">{{product.description}}</h5>
+                    <div class="car-buttons p-mt-5">
+                      <p-button type="button" styleClass="p-button p-mr-2" icon="pi pi-search">Подробнее</p-button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </p-carousel>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-grid">
+    <div class="p-col-12">
+      <div class="fourth-block">
+        <div class="fourth-block__title">
+          <h1 class="title__h1">ПОЧЕМУ ВЫБИРАЮТ НАС?</h1>
+        </div>
+        <div class="fourth-block__description">
+          <p class="description__text">KIMCLEANING — лучшая московская клининговая компания, которой можно доверить
+            задачи любой сложности. Мы занимаемся уборками на профессиональном уровне как жилых так и коммерческих
+            помещений. В нашей работе, главное для нас – чтобы наш клиент остался доволен!
+          </p>
+        </div>
+        <div class="card p-shadow-4 p-mt-3">
+          <div class="p-grid p-justify-center">
+            <div class="p-col-12 p-md-5 pd-10">
+              <i class="pi pi-home"></i>
+              <h2>ВЕДУЩИЕ ТЕХНОЛОГИИ</h2>
+              <p>Мы приезжаем к вам с профессиональным оборудованием и используем только безопасные дезинфицирующие
+                средства.</p>
+              <p-divider></p-divider>
+            </div>
+
+            <p-divider class="" layout="vertical"></p-divider>
+
+            <div class="p-col-12 p-md-5 pd-10">
+              <i class="pi pi-users"></i>
+              <h2>КОМАНДА</h2>
+              <p>Наша команда всегда готова прислушаться к вам и вашим пожеланиям в ходе работ. Где быть особенно
+                аккуратными или чему уделить особое внимание.</p>
+              <p-divider></p-divider>
+            </div>
+          </div>
+          <div class="p-grid p-justify-center">
+            <div class="p-col-12 p-md-5 pd-10">
+              <i class="pi pi-cog"></i>
+              <h2>НАДЕЖНОСТЬ</h2>
+              <p>Мы работаем на рынке с 2015 года, на нашем счету более сотен успешно выполненных заказов</p></div>
+
+            <p-divider class="" layout="vertical"></p-divider>
+
+            <div class="p-col-12 p-md-5 pd-10">
+              <i class="pi pi-thumbs-up"></i>
+              <h2>ЧИСТОТА</h2>
+              <p>Мы создаем не просто видимость чистоты, а заботимся о действительно глубоком удалении загрязнений.</p>
+            </div>
+          </div>
+        </div>
+        <h1 class="title__h1">Клининг сервис №1 в Москве</h1>
+      </div>
+    </div>
+  </div>
+  <div class="p-grid">
+    <div class="p-col-12">
+      <div class="fifth-block">
+        <div class="fifth-block__title">
+          <h1 class="title__h1 title__h1_color-white ">НЕТ НИЧЕГО ВАЖНЕЕ</h1>
+          <h2 class="title__h2 title__h2_color-white">Мы ставим в приоритет следующее:</h2>
+        </div>
+        <div class="fifth-block__button">
+          <div class="card">
+            <p-tabView styleClass="tabview-custom">
+              <p-tabPanel>
+                <ng-template pTemplate = "header">
+                  <i class="pi pi-user"></i>
+                  <span>Наши клиенты</span>
+                </ng-template>
+                <p>На сегодняшний день профессиональный клининг — это самая востребованная услуга, т.к. позволяет сэкономить ваше время и деньги! Уборка после ремонта, генеральная, поддерживающая, эко-уборка, мойка витрин и фасадов, полировка мрамора, химчистка мягкой мебели и ковровых покрытий, аутсорсинг персонала — это основной перечень услуг, которые мы предоставляем. Связавшись с нашим менеджером вы оговариваете ваши пожелания и сроки выполнения работ. После окончания всех работ наш менеджер сдает вам ваш объект «под ключ».</p>
+              </p-tabPanel>
+              <p-tabPanel header="header 2">
+                <ng-template pTemplate = "header">
+                  <i class="pi pi-globe"></i>
+                  <span>Окружающая среда</span>
+                </ng-template>
+                <p>Специально для тех кто с особым трепетом относятся к окружающей среде и своему собственному здоровью – мы используем экологически чистые моющее средства, которые полностью безопасны как для природы, так и для ваших домашних питомцев.</p>
+              </p-tabPanel>
+              <p-tabPanel header="header 3">
+                <ng-template pTemplate = "header">
+                  <i class="pi pi-phone"></i>
+                  <span>Связь</span>
+                </ng-template>
+                <p>Если Вам необходимы услуги по уборке, которые не включены в наш перечень – мы всегда готовы выслушать вас и обсудить возможные варианты. Свяжитесь с нашим менеджером для обсуждения деталей по указанным номерам в разделе контакты. Так же вы можете связаться с нами в Viber, WatsApp, Teleram</p>
+              </p-tabPanel>
+            </p-tabView>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-grid">
+    <div class="p-col-12">
+      <div class="sixth-block">
+        <div class="sixth-block__title">
+          <h1 class="title__h1">О НАШЕЙ КОМПАНИИ</h1>
+        </div>
+        <div class="p-grid">
+          <div class="p-col-12 p-md-4">
+            <div class="sixth-block__image">
+              <img src="assets/img/12.jpg">
+            </div>
+          </div>
+          <div class="p-col-12 p-md-8">
+            <h3 class="p-text-center">Наша задача действительно произвести уборку помещения, а не создать видимость чистоты.</h3>
+            <div class="sixth-block__description">
+              <p class="description__text">Мы работаем на рынке клининговых услуг в городе Москва с 2015. Изначально мы начинали только с уборки квартир, домов и придомовых территорий и только после, завоевав доверие — стали так же сотрудничать с коммерческими организациями. На сегодняшний день мы сотрудничаем не только с офисами, магазинами, а так же частными лицами, но и гостиницами, отелями и торговыми центрами. Если уборку офиса, отеля или торгового центра доверить профессионалам – расходы на их содержания не растут, а сокращаются, в то время как эффективность уборки возрастает.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-grid">
+    <div class="p-col-12">
+      <div class="seventh-block">
+        <div class="seventh-block_title">
+          <h1 class="title__h1">КЛИНИНГОВАЯ КОМПАНИЯ KIMCLEANING В МОСКВЕ</h1>
+        </div>
+<div class="seventh-block__description">
+  <p class="description__text">Чистота, порядок и уют в доме и на работе — это всегда приятно. Но чаще всего времени на самостоятельную уборку катастрофически не хватает. Да и порой самостоятельная борьба с загрязнениями может привести к испорченной поверхности и дальнейшим затратам. А в офисе, как правило, чистотой занят специально нанятый человек, но насколько добросовестно и качественно он справляется со своей работой? К счастью, прогресс не стоит на месте и нам на помощь приходит клининговая компания, задача которой сделать нашу жизнь комфортнее и чище. Если у Вас нет времени и желания самостоятельно заниматься уборкой, можете доверить это дело профессионалам клининговой компании KIMCLEANING в Москве и мы все сделаем за Вас!</p>
+</div>
+      </div>
+    </div>
+    <div class="p-col-12 p-md-4">
+      <div class="seventh-block__image">
+        <img src="assets/img/14.webp">
+      </div>
+    </div>
+    <div class="p-col-12 p-md-8">
+      <div class="seventh-block_title">
+        <h1 class="title__h1">ПРОФЕССИОНАЛЬНЫЙ КЛИНИНГ В МОСКВЕ ПО ДОСТУПНЫМ ЦЕНАМ</h1>
+      </div>
+      <div class="seventh-block__description">
+        <p class="description__text">Стоит отметить, что профессиональный клининг — это не просто поверхностная уборка. Это полноценный уход за мебелью, ковровыми покрытиями, бытовой техникой, стеклянными поверхностями и т.д. У Вас намечается праздник или же он уже прошел, собираетесь затеять ремонт, а быть может думаете над тем, как избавиться от строительного мусора после него?  Клининговая компания KIMCLEANING в Москве приложит все усилия, чтобы помочь Вам. Вы удивитесь тому, что цены на услуги клининга KIMCLEANING одни из самых доступных цен Москве.</p>
+      </div>
+      <div class="seventh-block__button">
+        <div class="sizes">
+          <p-button label="Заказать клининг" icon="pi pi-dollar" styleClass="p-button-lg"></p-button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="p-grid">
+    <div class="p-col-12">
+      <div class="eighth-block">
+        <div class="eighth-block__title">
+          <h1 class="title__h1">КАЧЕСТВЕННАЯ УБОРКА КВАРТИР И ПОМЕЩЕНИЙ В МОСКВЕ</h1>
+        </div>
+        <div class="eighth-block__description">
+          <p class="description__text">Мы предоставляем целый спектр услуг, в состав которого входят: уборка квартир, офисов и прочих помещений после ремонта, генеральная уборка, химчистка ковровых поверхностей и мягкой мебели, мойка витрин, окон, фасадов.  Все работы проводятся профессиональными клинерами с применением специального оборудования и экологически чистых моющих средств, которые, несмотря на высокую эффективность борьбы с грязью, абсолютно безвредны для здоровья. Также мы гарантируем своевременность, адекватные цены и качественно выполненную работу.
+
+            Позвольте нашей клининговой компании взять на себя рутинные хлопоты ежедневных и генеральных уборок, ведь KIMCLEANING в Москве — это гарантия качества, оперативности и профессионализма. Мы заботимся о том, чтобы на фоне чистых фасадов Ваши окна сияли чистотой, а мебель и ковровые покрытия в доме дышали свежестью.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-grid">
+    <div class="p-col-12">
+      <div class="ninth-block">
+        <div class="ninth-block__item">
+          <h4><i class="pi pi-phone p-mr-1"></i>Позвоните</h4>
+          <p class="fs-08"><a href="tel:+79808888790">+7(980)8888-790</a></p>
+        </div>
+        <div class="ninth-block__item">
+          <h4><i class="pi pi-globe p-mr-1"></i>Kimcleaning</h4>
+          <p class="fs-08"><b>№1 в Москве</b></p>
+        </div>
+        <div class="ninth-block__item">
+          <h4><i class="pi pi-map-marker p-mr-1"></i>Адрес:</h4>
+          <p class="fs-08"><b>Москва</b></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

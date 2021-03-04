@@ -1,0 +1,103 @@
+<div class="wrapper">
+  <p-breadcrumb [model]="items" [home]="home"></p-breadcrumb>
+  <div class="p-grid">
+    <div class="p-col-12 p-p-0">
+      <div class="block-1">
+        <div class="block-1__title">
+          <h1>Контакты</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-grid">
+    <div class="p-col-12">
+      <div class="block-3">
+        <div class="block-3__image">
+          <img class="image" src="assets/img/kim.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-grid">
+    <div class="p-col-12">
+      <div class="block-4">
+        <div class="block-4__description">
+          <p class="p-text-center">Если у Вас возникли вопросы — свяжитесь с нами и мы с радостью ответим на них!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-grid">
+    <div class="p-col-12 p-md-6">
+      <div class="block-about">
+        <img class="block-about__img" src="assets/img/33.jpg">
+      </div>
+    </div>
+    <div class="p-col-12 p-md-6">
+      <div class="block-about">
+        <div class="block-about__title">
+          <h3><i class="pi pi-map p-mr-2"></i>KIMCLEANING</h3>
+        </div>
+        <div class="block-about__description">
+          <p>г. Москва</p>
+        </div>
+        <div class="block-about__title">
+          <h3><i class="pi pi-phone p-mr-2"></i>Телефон</h3>
+        </div>
+        <div class="block-about__description">
+          <p>+7(980)8888-790</p>
+        </div>
+        <div class="block-about__title">
+          <h3><i class="pi pi-clock p-mr-2"></i>График работы</h3>
+        </div>
+        <div class="block-about__description">
+          <p>Ежедневно: 09:00 — 21:00</p>
+        </div>
+        <div class="block-about__title">
+          <h3><i class="pi pi-envelope p-mr-2"></i>Email</h3>
+        </div>
+        <div class="block-about__description">
+          <p>г. Москва</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="p-grid">
+    <div class="p-col-12">
+      <div class="block-about">
+        <div class="block-about__title">
+          <h3 class="p-text-center">Напишите нам</h3>
+        </div>
+        <div class="block-about__form">
+          <form [formGroup]="form" (ngSubmit)="submit()">
+            <div class="card">
+              <div class="p-fluid p-formgrid p-grid">
+                <div class="p-field p-col-12 p-md-6">
+                  <div class="form-control">
+                    <label>Ваше имя</label>
+                    <input name="firstname" formControlName="firstname" type="text" maxlength="30" pInputText>
+                  </div>
+                </div>
+                <div class="p-field p-col-12 p-md-6">
+                  <div class="form-control">
+                    <label>Ваш номер телефона</label>
+                    <p-inputMask name="phone" formControlName="phone" mask="(999) 999-9999" [(ngModel)]="val1"
+                                 placeholder="(999) 999-9999"></p-inputMask>
+                  </div>
+                </div>
+                <div class="p-field p-col-12">
+                  <label>Сообщение</label>
+                  <textarea name="text" formControlName="text" type="text" rows="4" maxlength="200"
+                            pInputTextarea></textarea>
+                </div>
+                <p-button type="submit" label="Отправить" (click)="showTopCenter()"
+                          [disabled]="form.invalid || submitted"></p-button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<p-toast position="top-center" key="tc"></p-toast>

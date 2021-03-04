@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,300;1,400&display=swap');
+@import "assets/styles/mixins/media.scss";
+@import "assets/styles/common/global";
+@import "assets/styles/common/services";
+@import "assets/styles/common/about";
+.p-breadcrumb {
+  color: rgba(117, 54, 214, 0.87);
+  font-weight: bold;
+  margin-top: 5px;
+}
+.p-grid{
+  margin: 0;
+}
+.p-tabview .p-tabview-nav .p-tabview-ink-bar{
+  display: none;
+}
+.p-datatable.p-datatable-gridlines .p-datatable-thead > tr:nth-child(even){
+  background: #e2e2e2;
+}
+.p-datatable.p-datatable-gridlines .p-datatable-thead > tr > th{
+  background: none;
+}

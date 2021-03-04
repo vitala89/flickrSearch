@@ -1,0 +1,39 @@
+<div class="wrapper">
+  <div class="p-grid">
+    <div class="p-col-12">
+      <form [formGroup]="form" (ngSubmit)="submit()" >
+      <p-card header="Вход в Админ панель" [style]="{width: '360px'}" styleClass="p-card-shadow">
+        <ng-template pTemplate="header">
+          <img alt="Card" src="assets/img/kim.jpg">
+        </ng-template>
+        <div class="form-control">
+          <div class="p-field">
+            <label for="email">Login</label>
+            <input id="email" type="email" formControlName="email" aria-describedby="p-error"  pInputText />
+            <div *ngIf="form.get('email').touched && form.get('email').invalid" class="ng-invalid ng-dirty">
+            <small *ngIf="form.get('email').errors.required" class="p-error">Введите Email.</small>
+              <small *ngIf="form.get('email').errors.email" class="p-error">Введите корректный Email.</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-control">
+          <div class="p-field">
+            <label for="password">Пароль</label>
+            <input id="password" type="password" formControlName="password" aria-describedby="p-error"  pInputText />
+            <div *ngIf="form.get('password').touched && form.get('password').invalid" class="ng-invalid ng-dirty">
+              <small *ngIf="form.get('password').errors.required" class="p-error">Введите пароль.</small>
+              <small *ngIf="form.get('password').errors.minlength" class="p-error">
+                Пароль должен быть не меньше {{form.get('password').errors.minlength.requiredLength}} строк.
+              </small>
+            </div>
+          </div>
+        </div>
+        <ng-template pTemplate="footer">
+          <p-button type="submit" [disabled]="form.invalid || submitted" label="Войти"></p-button>
+        </ng-template>
+      </p-card>
+      </form>
+    </div>
+  </div>
+</div>

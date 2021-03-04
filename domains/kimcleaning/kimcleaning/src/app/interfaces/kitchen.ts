@@ -1,0 +1,3 @@
+interface Kitchen {
+  name: string,
+}

@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  position: relative;
+  max-width: 1120px;
+  margin: 0 auto;
+  justify-content: center;
+}
+.p-field > label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.p-field > small {
+  margin-top: 0.25rem;
+  display: block;
+}

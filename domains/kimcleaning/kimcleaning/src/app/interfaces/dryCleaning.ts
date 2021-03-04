@@ -1,0 +1,3 @@
+interface DryCleaning {
+  name: string,
+}

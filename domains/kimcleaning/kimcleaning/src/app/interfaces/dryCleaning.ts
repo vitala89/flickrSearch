@@ -1,3 +1,0 @@
-interface DryCleaning {
-  name: string,
-}

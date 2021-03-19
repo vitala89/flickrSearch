@@ -1,0 +1,28 @@
+<div class="p-field p-col-11">
+  <div class="image-list p-mt-3" *ngIf="bookmarks.length; else empty">
+    <div class="card">
+      <p-dataView #dv [value]="bookmarks" [paginator]="true" [rows]="9" layout="grid">
+        <ng-template let-bookmark pTemplate="gridItem">
+          <div class="p-col-12 p-md-4">
+            <div class="product-grid-item card">
+              <div class="product-grid-item-content">
+                <img [src]="bookmark.url" [alt]="bookmark.title"/>
+                <div class="product-name">{{bookmark.title | truncate:[20]}}</div>
+              </div>
+              <div class="product-list-action">
+                <p-chips separator="," placeholder="some tags?"></p-chips>
+                <div class="p-mb-2"></div>
+                <p-button (click)="deleteBookmark(bookmark);" styleClass="p-button-danger p-ml-3" label="Delete" icon="pi pi-trash"></p-button>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </p-dataView>
+    </div>
+  </div>
+  <ng-template #empty>
+    <div class="p-text-center">
+      <h2>No image here. Would you try to search for anything else</h2>
+    </div>
+  </ng-template>
+</div>

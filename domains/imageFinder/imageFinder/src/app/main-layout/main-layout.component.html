@@ -1,0 +1,37 @@
+<div class="wrapper">
+  <div class="p-grid">
+    <div class="p-col-12">
+      <p-menubar>
+        <ng-template pTemplate="start">
+          <h2>Image Finder</h2>
+        </ng-template>
+        <ng-template pTemplate="end">
+          <p-avatar icon="pi pi-user" styleClass="p-mr-2" size="xlarge" shape="circle"></p-avatar>
+        </ng-template>
+      </p-menubar>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="p-gird p-d-flex" style="flex-direction: row;height: 100%;" >
+      <div class=" p-d-flex p-col-1 sticky" style="align-items: stretch;">
+        <div class="image-sidebar" >
+          <p ><a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><i class="pi pi-cloud" style="font-size: 2rem"></i></a></p>
+          <p><a routerLink="/bookmarks" routerLinkActive="active"><i class="pi pi-bookmark" style="font-size: 2rem"></i></a></p>
+        </div>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+  <div class="footer p-d-flex p-justify-center">
+    <p>
+      Copyright "ImageFinder"
+    </p>
+  </div>
+
+</div>
+
+
+
+
